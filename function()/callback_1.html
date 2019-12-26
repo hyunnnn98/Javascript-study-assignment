@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var count = 1;
+
+        // function sayHello() {
+        //     console.log("Hello World JavaScript : ", count);
+        //     count++;
+        // }
+
+        // setTimeout(() => {
+        //     sayHello();
+        // }, 500);
+        // // 5000ms 후에 호출하도록 sayHello 함수를 setTimeout에 인자로 전달
+
+        function sayHello() {
+            console.log("Hello World JavaScript : ", count);
+            count++;
+        }
+
+        setTimeout(sayHello, 5000); 
+              // 5000ms 후에 호출하도록 sayHello 함수를 setTimeout에 인자로 전달
+
+        console.log("Hello Callback function");
+    </script>
+</body>
+
+</html>

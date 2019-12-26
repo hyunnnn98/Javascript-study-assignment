@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="getString()">누르면 번호 생성 알고리즘</button>
+    <button onclick="outString()">누르면 번호 삭제 알고리즘</button>
+
+    <script>
+        var nCount = 1;
+
+        function getString() {
+            var code = "<p></p>";
+            document.body.innerHTML += code;
+            var ptags = document.querySelectorAll('p');
+            ptags[nCount - 1].innerText = `${nCount}번째 p태그를 생성합니다.`;
+            nCount++;
+        }
+
+        function outString() {
+            var ptags = document.querySelectorAll('p');
+            // ptags[nCount].innerHTML = " ";
+            // ptags[nCount - 1].removeChild(ptags[nCount - 1]);
+            // ptags.removeChild(ptags[nCount - 1]);
+            nCount--;
+        }
+    </script>
+</body>
+
+</html>

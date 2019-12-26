@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var input = 0, count = 0, sum = 0;
+        do{
+            input = parseInt(prompt("숫자입력","마지막은 999"));
+            if (input != 999){
+                sum += input;
+                count++;
+                document.write("입력" + count + " : " + input + "<BR>");
+            }
+        }while(input != 999)
+        document.write("합계 : " + sum + "<BR>");
+        document.write("평균 : " + sum / count + "<BR>");
+        </script>
+</body>
+</html>

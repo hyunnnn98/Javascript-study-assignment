@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var count = 1;
+
+        function sayHello() {
+            console.log('hello world javascript');
+        }
+
+        setTimeout(() => {
+           sayHello(); 
+        }, 5000);
+        console.log('callback함수 호출');
+    </script>
+</body>
+</html>

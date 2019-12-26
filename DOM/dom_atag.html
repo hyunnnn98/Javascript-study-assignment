@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        window.onload = function () {
+            var atags = document.querySelectorAll('a');
+            for (var i = 0; i < atags.length; i++) {
+                var atag = atags[i];
+                atag.style.display = "block";
+                atag.style.width = "80px";
+                atag.style.textDecoration = "none";
+                atag.style.textAlign = "center";
+                atag.style.lineHeight = "2";
+                atag.style.color = 'white';
+                atag.style.backgroundColor = 'navy';
+                atag.style.fontWeight = "700";
+
+                // if (i == 1) {
+                //     atag.style.backgroundColor = 'red';
+                // }
+            }
+            var atag = document.querySelector("a:nth-child(2)");
+            atag.style.backgroundColor = "red";
+        }
+    </script>
+</head>
+
+<body>
+    <a href="">link1</a>
+    <a href="">link2</a>
+    <a href="">link3</a>
+</body>
+
+</html>

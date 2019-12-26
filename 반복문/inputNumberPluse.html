@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var newArray = new Array();
+        var sum = 0, count = 0;
+        for(var i = 1; i <= 10; i++){
+            newArray[i] = (prompt(i + "번째 숫자를 입력하세요"));
+            document.write(i + " 번째 숫자 " + newArray[i]);
+            if(newArray[i] > 0) {
+                document.write(" 0보다 큰 수!");
+                sum += parseInt(newArray[i]);
+                count++;
+            }
+            document.write("<BR>");
+        }
+        document.write("0보다 큰 수의 합 : " + sum + "<BR>");
+        document.write("0보다 큰 수의 평균 : " + sum / count);
+
+        </script>
+</body>
+</html>

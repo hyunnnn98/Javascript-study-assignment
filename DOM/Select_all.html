@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            // var headers = document.querySelectorAll('h1');
+            var headers = document.getElementsByClassName('h11');
+            for(var i = 0; i < headers.length; i++) {
+                var header = headers[i];
+                header.style.color = 'white';
+                header.style.backgroundColor = 'orangered';
+                header.innerHTML = 'From JavaScript';
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1 class = 'h11'>Header1</h1>
+    <h1 class = 'h11'>Header2</h1>
+    <h1 class = 'h11'>Header3</h1>
+</body>
+</html>

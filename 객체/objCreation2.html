@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var obj = new Object();
+        obj.name = "홍길동";
+        obj.sid = "12345678";
+        obj.addr = "대구광역시 북구 복현동";
+        obj.score = 95;
+
+        for(var key in obj){
+            document.write(key + " : " + obj[key] + "<br>");
+            // 배열이라고 생각하고 obj[] 를 쓰자 for in 문에서는 obj.key는 사용불가.
+        }
+    </script>
+</body>
+</html>

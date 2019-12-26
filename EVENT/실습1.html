@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // inline 방식
+        // function hello() {
+        //     document.querySelector("#demo").innerHTML = "Hello World!!";
+        // }
+
+        // 프로퍼티 방식
+        // window.onload = function(){
+        //     var divTag = document.querySelector("#demo");
+        //     var button = document.querySelector("button");
+        //     button.onclick = function() {
+        //         divTag.innerHTML = "Hello World!!";
+        //     }
+        // }
+
+        // 에드 이벤트 방식 addEventListener 이용.
+        window.addEventListener("load", print);
+
+        function print() {
+            var btn = document.querySelector("button");
+            btn.addEventListener("click", function () {
+                document.querySelector("#demo").innerHTML = "Hello World!!";
+            });
+            // 이렇게 한건 에드이벤트 방식에 프로퍼티를 같이 쓴거라서 문제 정답에 어긋나는 방식임.
+            // btn.onclick = function() {
+            //     document.querySelector("#demo").innerHTML = "Hello World!!";
+            // }
+        }
+
+        // 에드 이벤트 방식 addEventListener 이용. ES6 방식
+        // window.addEventListener("load", () => {
+        //     var btn = document.querySelector("button");
+        //     btn.onclick = () => {
+        //         document.querySelector("#demo").innerHTML = `Hello World!!`;
+        //     }
+
+        // });
+    </script>
+</head>
+
+<body>
+    <!-- <button onclick="hello()">Hello</button> -->
+    <button>Hello</button>
+    <div id="demo"></div>
+    <!-- <script>
+        var btn = document.querySelector("button");
+        btn.addEventListener("click", function () {
+            document.querySelector("#demo").innerHTML = "Hello World!!";
+        });
+    </script> -->
+</body>
+
+</html>

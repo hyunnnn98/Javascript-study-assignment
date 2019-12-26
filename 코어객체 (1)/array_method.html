@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <script>
+        var fruits = ["Banana", "Orange", "Apple", "Mango"];
+        var mountains = ["한라산", "지리산", "설악산"];
+
+        var arrayConcat = fruits.concat(mountains);
+        console.log(arrayConcat);
+
+        var index = fruits.indexOf("Mango");
+        console.log("Mango의 배열의 위치(index) : " + index);
+
+        console.log(fruits.join(" * "));
+
+        fruits.pop(); // Removes the last element ("Mango") from fruits 
+        console.log(fruits);
+
+        fruits.push("Kiwi"); //  Adds a new element ("Kiwi") to fruits
+        console.log(fruits);
+
+        fruits.splice(2, 0, "Banana", "PineApple");
+        //The splice() method can be used to add new items to an array 
+        console.log(fruits);
+
+        fruits.splice(2, 1, "Cherry", "Tomato");
+        //The splice() method can be used to add new items to an array 
+        console.log(fruits);
+
+        var sliced_val = fruits.slice(1);
+        //selects elements from the start argument, and up to the end argument.
+        console.log("sliced_val--->", sliced_val);
+
+        var sliced_val = fruits.slice(1, 3);
+        //selects elements from the start argument, and up to (but not including) the end argument.
+        console.log("sliced_val--->", sliced_val);
+
+        var tostring = fruits.toString();
+        //converts an array to a comma separated string 
+        console.log(tostring);
+    </script>
+</body>
+
+</html>

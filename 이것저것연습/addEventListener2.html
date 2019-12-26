@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        window.addEventListener("load", function () {
+            var button = document.querySelector("#myBtn");
+            button.addEventListener("click", buttonClick1);
+            button.addEventListener("click", buttonClick2);
+
+            function buttonClick1() {
+                alert("1차경고");
+            }
+
+            function buttonClick2() {
+                alert("2차경고");
+            }
+        })
+    </script>
+</head>
+
+<body>
+    <button id="myBtn">Try</button>
+</body>
+
+</html>

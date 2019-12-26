@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        window.addEventListener("load", function () {
+            var atag = document.querySelectorAll("a");
+            var ultag = document.querySelector("ul");
+            var litag = document.querySelectorAll("li");
+
+            ultag.style.padding = "0px";
+            ultag.style.listStyle = "none";
+            ultag.style.backgroundColor = "navy";
+            ultag.style.display = "flex";
+
+            for (var i = 0; i < litag.length; i++) {
+                li = litag[i];
+                a = atag[i];
+                li.style.width = "100px";
+                li.style.textAlign = "center";
+                // atag도 li태그랑 크기를 맞추기위해 displayy = "block" 을 써준다ㅕ
+                a.style.display = "block";
+                a.style.color = "white";
+                a.style.textDecoration = "none";
+                a.style.fontWeight = "700";
+                // li.addEventListener("mouseover", function () {
+                //     li.style.backgroundColor = "red";
+                // })
+                a.addEventListener("mouseover",function(){
+                    this.style.backgroundColor = "red";
+                    // 함수를 호출할때는 this를 써야한다.. 이건 몰랐네
+                    // 함수를 호출하는 객체가 있을 때는 어떤 객체를 불러오는지 모르기 때문에 this를 쓴다.
+                });
+
+                a.addEventListener("mouseout",function(){
+                    this.style.backgroundColor = "inherit";
+                    //  기존색상으로하려면 inherit
+                });
+            }
+
+            // litag.addEventListener("mouseover", function () {
+            //     litag.style.backgroundColor = "red";
+            // })
+        });
+    </script>
+</head>
+
+<body>
+    <h1>ul li hover 처리</h1>
+    <ul>
+        <li><a href="">link1</a></li>
+        <li><a href="">link2</a></li>
+        <li><a href="">link3</a></li>
+        <li><a href="">link4</a></li>
+        <li><a href="">link5</a></li>
+    </ul>
+</body>
+
+</html>

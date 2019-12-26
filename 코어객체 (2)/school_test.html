@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function CompareForSort(first, second) {
+            return first - second;
+        }
+
+        var value = prompt("숫자를 입력하세요!!");
+        var save = value.split(' ').sort(CompareForSort);
+
+        document.write(save + "<br>");
+
+        var user_Array = [];
+
+        function randomInt() {
+            return Math.floor(Math.random() * 50) + 50;
+        }
+
+        for (var a = 0; a < 10; a++) {
+            user_Array[a] = randomInt();
+        }
+
+        document.write(user_Array.sort(CompareForSort));
+    </script>
+</body>
+
+</html>

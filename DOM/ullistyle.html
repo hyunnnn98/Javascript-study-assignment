@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        window.onload = function () {
+            var ultag = document.querySelector('ul');
+            ultag.style.backgroundColor = "navy";
+            ultag.style.display = "flex";
+            ultag.style.padding = "0px";
+            ultag.style.listStyle = "none";
+            ultag.style.overflow = "hidden";
+            // ultag.style.justifyConqtent = "center";
+            var litags = document.querySelectorAll('li');
+            var atags = document.querySelectorAll('a');
+
+            for (var i = 0; i < litags.length; i++) {
+                var atag = atags[i];
+                var litag = litags[i];
+
+                litag.style.width = "100px";
+                litag.style.backgroundColor = "orange";
+                litag.style.marginRight = "20px";
+                atag.style.display = "block";
+                atag.style.textDecoration = "none";
+                atag.style.textAlign = "center";
+                atag.style.lineHeight = "2";
+                atag.style.fontWeight = "700";
+                atag.style.color = "white";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <ul>
+        <li><a href="">link1</a></li>
+        <li><a href="">link2</a></li>
+        <li><a href="">link3</a></li>
+        <li><a href="">link4</a></li>
+        <li><a href="">link5</a></li>
+    </ul>
+</body>
+
+</html>

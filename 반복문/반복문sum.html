@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var input = prompt("aa");
+        var sum = 0;
+        function addToN(input){
+            for(var i = 1; i <= input; i++){
+                sum += i;
+            }
+            // alert(sum);
+            return sum;
+        }
+        // addToN(input);
+        var allsum = 0;
+        function sum1(number){
+            for(var i = 1; i <= number; i++){
+                allsum += addToN(i);
+            }
+            alert(allsum);
+        }
+        sum1(input);
+    </script>
+</body>
+</html>

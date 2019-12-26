@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 프로퍼티 방식 
+        window.onload = function () {
+            var btn = document.querySelector('input[type = "button"]');
+            btn.onclick = function () {
+                var exp = document.getElementById("exp");
+                var result = document.getElementById("result");
+                result.value = eval(exp.value);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>수식 계산</h1>
+    <h3>계산식을 입력하세요</h3>
+    시험에 인라인형식으로 코드주고 프로퍼티, 에드이벤트 방식으로 바꾸기 나온다.
+
+    <form action="">
+        계산식 <input type="text" id="exp" value=""><br>
+        결과값 <input type="text" id="result">
+        <!-- 인라인 형식의 코드 -->
+        <input type="button" value="계산" onclick="e">
+        <input type="button" value="계산">
+
+    </form>
+</body>
+
+</html>

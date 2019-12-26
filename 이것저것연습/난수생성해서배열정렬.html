@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var input_Number = prompt("숫자 입력");
+
+        // var Number_Array = input_Number.split(" ");
+
+        // console.log(Number_Array);
+
+        // Number_Array.sort(function(a , b) { return a - b});
+        // console.log(Number_Array);
+
+
+        var i, Random_Array = [];
+
+        for (i = 0; i < 10; i++) {
+            Random_Array[i] = parseInt(Math.random() * 50) + 50;
+        }
+        console.log(Random_Array);
+
+        Random_Array.sort(function (a, b) {
+            return b - a;
+        });
+        console.log(Random_Array);
+    </script>
+</body>
+
+</html>

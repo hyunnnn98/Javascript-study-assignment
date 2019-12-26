@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            var textValue = document.querySelector("input");
+            var resultButton = document.querySelector("#약수");
+            var resultValue = document.querySelector("#result");
+            resultButton.onclick = function(){
+                if(textValue.value == 0) return resultValue.innerHTML = 0;
+                var startN = 2;
+                var resultString = "";
+                while(true){
+                    if(textValue.value == 1) break;
+                    if(textValue.value % startN == 0){
+                        resultString = textValue.value + " " + resultString ;
+                        textValue.value = textValue.value / startN;
+                    }else{
+                        startN++;
+                    }
+                }
+                resultValue.innerHTML = "1 " + resultString;
+            }
+        }
+    </script>
+</head>
+<body>
+    <p>숫자 입력 = 약수</p>
+    <input type="text">
+    <button id = "약수">약수</button>
+    <p id = "result"></p>
+</body>
+</html>

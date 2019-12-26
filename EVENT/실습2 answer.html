@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        window.addEventListener("load", function () {
+            var btn = document.querySelector("button");
+            btn.addEventListener("click", function () {
+                var num = parseInt(document.querySelector("input").value);
+                var ans = "";
+                for(var i = 1; i <= num; i++){
+                    if(num % i == 0){
+                        ans = ans + i + " ";
+                    }
+                }
+                document.querySelector("#answer").innerHTML = ans;
+            })
+        });
+    </script>
+</head>
+
+<body>
+    <p>숫자 입력 - 약수</p>
+    <input type="text">
+    <button>약수</button>
+    <p id="answer"></p>
+</body>
+
+</html>

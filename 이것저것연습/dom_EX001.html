@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="change">none changed txt</h1>
+    <h1 id="change">Hello JavaScript</h1>
+    <h1 id="change">Hello JavaScript</h1>
+    <p id="ver1">aaa</p>
+
+    <button onmouseup="clickEvent()" onmouseout="mouseOver()">색상변경</button>
+
+    <script>
+        // var a = document.getElementById("change");
+        // a.innerHTML = "changed txt"
+        // a.style.backgroundColor = "black";
+        // a.style.color = "orange";
+        // a.style.width = "400px";
+        // a.style.textAlign = "center";
+        // a.style.lineHeight = "2";
+        // a.style.border = "4px solid red";
+
+        window.onload = function () {
+            // var b = document.querySelector("#change");
+            // querySelectorAll 로 접근할시 여러개가 있는 경우이니까 배열형식으로 
+            // 각각의 속성을 지정해줘야 한다!!! 이거 명심하자.
+            var changes = document.querySelectorAll("#change");
+            for (var i = 0; i < changes.length; i++) {
+                changes[i].style.color = "blue";
+            }
+
+            document.getElementById('ver1').innerHTML = "<p>이걸로 변경함.</p>"
+        }
+
+        function clickEvent() {
+            var changes1 = document.querySelectorAll("#change");
+            changes1[1].style.backgroundColor = "red";
+        }
+
+        function mouseOver() {
+            var changes1 = document.querySelectorAll("#change");
+            changes1[1].style.backgroundColor = "white";
+        }
+    </script>
+</body>
+
+</html>

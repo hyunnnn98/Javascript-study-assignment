@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        window.onload = function () {
+            // set 단계 --- 속성을 지정합니다.
+            document.body.setAttribute('data-custom', 'value');
+
+            // get 단계 --- 속성을 추출합니다.
+            var dataCustom = document.body.getAttribute('data-custom');
+            alert(dataCustom);
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

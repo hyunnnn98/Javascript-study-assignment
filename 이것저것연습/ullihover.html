@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        window.addEventListener("load", function () {
+            var ulTag = document.querySelector("ul");
+            ulTag.style.display = "flex";
+            ulTag.style.padding = 0;
+            ulTag.style.listStyle = "none";
+            ulTag.style.backgroundColor = "navy";
+
+            var aTags = document.querySelectorAll("a");
+            var liTags = document.querySelectorAll("li");
+            for (var i = 0; i < 5; i++) {
+                var a = aTags[i];
+                var li = liTags[i];
+                li.style.width = "120px";
+                a.style.display = "block";
+                a.style.color = "white";
+                a.style.textDecoration = "none";
+                a.style.textAlign = "center";
+                a.style.fontWeight = "900";
+                li.addEventListener("mouseover", function(){
+                    this.style.backgroundColor = "red";
+                })
+                li.addEventListener("mouseout", function(){
+                    this.style.backgroundColor = "navy";
+                })
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <h1>ul li hover 처리</h1>
+    <ul>
+        <li><a href="">link1</a></li>
+        <li><a href="">link2</a></li>
+        <li><a href="">link3</a></li>
+        <li><a href="">link4</a></li>
+        <li><a href="">link5</a></li>
+    </ul>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a,b,c,d,e,f;
+        a = 81;
+        b = 93;
+        c = 75;
+        d = 69;
+        e = 88;
+        f = 79;
+        var average = (a + b + c + d + e + f) / 6;
+        st = (Math.pow(a - average, 2) + Math.pow(b - average, 2)
+         + Math.pow(c - average, 2) + Math.pow(d - average, 2)
+         + Math.pow(e - average, 2) + Math.pow(f - average, 2)) / 6;
+         document.write("분산     : " + st + "입니다." + "<br>");
+         document.write("표준편차 : " + Math.sqrt(st) + "입니다.");
+        </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            color: orangered;
+            font-size: 2em;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<!-- onload는 해당태그안에 모든 요소가 완료되면 그제서야 onload=""안의 코드를 수행함. -->
+<body onload="startTime()">
+    <h1>현재시간은...</h1>
+    <div id="txt"></div>
+    <script>
+        function startTime(){
+            var today   = new Date();
+            var h       = today.getHours();
+            var m       = today.getMinutes();
+            var s       = today.getSeconds();
+            // add a zero in front of numbers < 10
+            h = checkTime(h);
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById("txt").innerHTML = h + ":" + m + ":" + s;
+            // innterHTML은 html문법을 쓸 수 있는거고 innterText는 그냥 문자열만 쓸 수 있는거.
+            setTimeout(startTime, 500);
+        }
+
+        function checkTime(i) {
+            if (i < 10) {
+                i = "0" + i;
+            }
+            return i;
+        }
+    </script>
+</body>
+</html>

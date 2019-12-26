@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a = [11, 12, 25, 45, 49, 51, 67, 77, 93, 99];
+        var b = [17, 19, 27, 33, 41, 53, 61, 71, 87, 91];
+        var c = [];
+        var idxN1 = 0,
+            idxN2 = 0,
+            k = 0;
+        while (idxN1 < a.length && idxN2 < b.length) {
+            if (a[idxN1] < b[idxN2]) {
+                c[k++] = a[idxN1++];
+            } else {
+                c[k++] = b[idxN2++];
+            }
+        }
+        for (; idxN1 < a.length; idxN1++) {
+            c[k++] = a[idxN1];
+        }
+        for (; idxN2 < a.length; idxN2++) {
+            c[k++] = b[idxN2];
+        }
+        document.write(c);
+    </script>
+</body>
+
+</html>

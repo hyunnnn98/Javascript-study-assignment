@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <script>
+    var date = new Date(); //현재 날짜 및 시간
+
+    var gettime = date.getTime();
+    console.log('milliseconds:', gettime);
+    console.log("기준일 : ", date);
+
+    function caldate(day) {
+        var calcMonth, calcday, calcYear;
+
+        var v = new Date(gettime - day * 24 * 60 * 60 * 1000);
+        calcYear = v.getFullYear();
+        
+        if (v.getMonth() < 9) {
+            calcMonth = '0' + (v.getMonth() + 1);
+        } else {
+            calcMonth = v.getMonth() + 1;
+        }
+        
+        if (v.getDate() < 9) {
+            calcday = '0' + v.getDate();
+        } else {
+            calcday = v.getDate();
+        }
+
+        return calcMonth + '/' + calcday + '/' + calcYear;
+    }
+    console.log("30일 전 날짜 : " + caldate(30)); //30일전 날짜 출력
+    console.log("일주일 전 날짜 : " + caldate(7)); //일주일전 날짜 출력
+    console.log("하루 후 날짜 : " + caldate(-1)); //하루후 날짜 출력
+    console.log("일주일 후 날짜 : " + caldate(-7)); //일주일후 날짜 출력
+    console.log("한달 후 날짜 : " + caldate(-30)); //한달후 날짜 출력
+    </script>
+</body>
+
+</html>

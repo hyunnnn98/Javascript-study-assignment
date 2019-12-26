@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 택시의 기본요금은 주행거리 2000m까지 3000원이며, 
+        이후 142M마다 100원씩 가산된다.
+        주행거리를 입력하면 택시의 요금을 계산하여 출력
+        출력 예 :  
+            요금은 3200원입니다 -->
+    <script>
+        var inputRange = prompt("주행거리를 입력해주세요.",'100m 달렸으면 100이라고 입력');
+        var fee = 0;
+        if(inputRange <= 2000){
+            fee = 3000;
+        }else{
+            var alphaRange = inputRange - 2000;
+            fee = 3000 + parseInt(alphaRange / 142) * 100;
+        }
+
+        document.write(`택시요금은 ${inputRange}m를 달려서 ${parseInt(fee)}원 입니다.`);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 이벤트를 연결합니다. ( 방식 1 )
+        window.addEventListener("load", function () {
+            var clock = document.querySelector("#clock");
+            // 1초마다 함수를 실행합니다.
+            setInterval(() => {
+                var now = new Date();
+                clock.innerHTML = now.toString();
+            }, 1000);
+        });
+
+        // 이벤트
+        // window.onload = function () {
+        //     var clock = document.querySelector("#clock");
+
+        //     setInterval(() => {
+        //         var now = new Date();
+        //         clock.innerHTML = now.toString();
+        //     }, 1000);
+        // }
+    </script>
+</head>
+
+<body>
+    <h1 id="clock"></h1>
+</body>
+
+</html>

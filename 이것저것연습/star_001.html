@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        window.addEventListener('load', function () {
+            var textValue = document.querySelector("#textfield");
+            var button = document.querySelector("input[type=button]");
+
+            button.addEventListener('click', function () {
+                var star = "";
+                for (var i = 0; i < textValue.value; i++) {
+                    for (var b = textValue.value - i; b> 1; b--) {
+                        star += " ";
+                    }
+                    for (var a = 0; a < 2 * i + 1;a++) {
+                        star += "*";
+                    }
+                    star += "\n";
+                }
+                alert(star);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <!-- input tag 활용해서 해당 value 만큼 자동으로 별 생성 -->
+    <input type="text" id="textfield" placeholder="int값을 입력하세요." maxlength="3">
+    <input type="button" id="osubutton" value="출력">
+</body>
+
+</html>

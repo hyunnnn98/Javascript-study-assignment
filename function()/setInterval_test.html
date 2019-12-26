@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="start()">시작버튼</button>
+    <button onclick="stop()">멈추기</button>
+    <br>
+    <p id = "text">초기화 값</p>
+    <script>
+        var count = 1;
+        var interval;
+        function start() {
+            interval = setInterval(() => {
+                // document.write(count++ + '차 수행입니다.' + '<br>');
+                document.getElementById("text").innerText = count++ + '차 수행입니다.';
+            }, 500);
+        }
+
+        function stop() {
+            clearInterval(interval);
+            count = 1;
+        }
+    </script>
+</body>
+
+</html>

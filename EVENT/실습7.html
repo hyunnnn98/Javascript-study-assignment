@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        window.addEventListener("load", function () {
+            var join = document.querySelector("#join");
+            var search = document.querySelector("#search");
+            var input = document.querySelectorAll("input");
+            var divBox = document.querySelector("div");
+            var nameArray = [];
+            var callArray = [];
+            var joinArray = [];
+            // 계좌생성 버튼 눌렀을 시 
+            // 랜덤으로 계좌번호 생성해주고
+            //  이름, 전화번호, 계좌번호 저장하기.
+            var accountNumber = 0;
+            join.addEventListener("click", function () {
+                var ran = Math.floor(Math.random() * 20000000) - 1000000;
+                input[2].value = ran;
+                nameArray[accountNumber] = input[0].value;
+                callArray[accountNumber] = input[1].value;
+                joinArray[accountNumber] = input[2].value;
+                accountNumber++;
+            });
+
+            //조회버튼 클릭
+            var searchResult = '';
+            search.addEventListener("click", function () {
+                divBox.innerHTML = "<p></p>"
+                for (var i = 0; i < joinArray.length; i++) {
+                    if (input[3].value == joinArray[i]) {
+                        searchResult = "<p>" + nameArray[i] + "님 " + callArray[i] + " " + joinArray[i] +
+                            "</p>";
+                        divBox.innerHTML = searchResult;
+                    }
+                }
+            });
+
+
+        });
+    </script>
+</head>
+
+<body>
+    <h1>Account관리</h1>
+    <hr>
+    <h3>계좌생성</h3>
+    <p>이름과 전화번호를 입력하고 계좌생성 버튼을 클릭하시오!</p>
+    이름&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;<input type="text">
+    전화번호 <input type="text">
+    <button id="join">계좌생성</button><br>
+    계좌번호 <input type="text">
+    <hr>
+    <h3>계좌관리</h3>
+    <input type="text">
+    <button id="search">조회</button>
+    <button id="input">예금</button>
+    <button id="output">인출</button>
+    <button id="reset">reset</button>
+    <hr>
+    <h3>처리결과</h3>
+    <div></div>
+</body>
+
+</html>

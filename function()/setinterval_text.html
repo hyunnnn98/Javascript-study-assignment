@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    p{
+        font-size: 2em;
+        color: red;
+        font-weight: 900;
+    }
+    </style>
+</head>
+<body>
+    <h1>Change Text</h1>
+    <p id="demo">웹 프로그래밍</p>
+    <script>
+    var text = ["웹프로그래밍", "컴퓨터정보계열", "일본어대비", "소프트뱅크"];
+    var index = 0;
+    // var interval = setInterval(function(){
+    //     index = (index + 1) % 4;
+    //     document.getElementById("demo").innerHTML = text[index];
+    // }, 2000);
+
+    var ex = setInterval(() => {
+        index = (index + 1) % 4;
+        document.getElementById("demo").innerHTML = text[index];
+    }, 2000);
+    // setTimeout(function () {
+    //     clearInterval(interval);
+    // }, 30000);
+    setTimeout(() => {
+        clearInterval(ex);
+    }, 30000);
+    </script>
+</body>
+</html>

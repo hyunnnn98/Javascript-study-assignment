@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        window.addEventListener("load", function () {
+            var text = document.querySelector("#value");
+            var result = document.querySelector("#result");
+            var button = document.querySelector('input[type="button"]');
+
+            button.addEventListener("click", function () {
+                result.value = eval(text.value);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    식 : <input type="text" id="value"><br>
+    결과 : <input type="text" id="result">
+    <input type="button" value="계산">
+</body>
+
+</html>

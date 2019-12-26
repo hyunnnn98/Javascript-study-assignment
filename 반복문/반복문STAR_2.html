@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function result() {
+            var height;
+            height = parseInt(prompt("높이를 입력하세요."));
+            var save = "";
+            for (var i = 0; i < height; i++) {
+                // for (var j = 1; j <= height - i; j++) {
+                //     // document.write("&nbsp");
+                //     save += " ";
+                // }
+                // for (var k = 1; k <= i * 2 - 1; k++) {
+                //     // document.write("*");
+                //     save += "*";
+                // }
+                // save += "\n";
+                // document.write("<BR>");
+                for (var j = 0; j < i; j++) {
+                    save += " ";
+                }
+                for (var k = (height * 2) - 1 - 2 * i; k > 0; k--) {
+                    save += "*";
+                }
+                // for (var k = (height * 2) - 1; k > 2 * i; k--) {
+                //     save += "*";
+                // }
+                save += "\n";
+                // for(var i = 0; i < height; i++){
+                //     for(var j = 0; j < height - 1 - i; j++){
+                //         save += " ";
+                //     }
+                //     for(var k = 0; k < i * 2 + 1; k++){
+                //         save += "*";
+                //     }
+                //     save += "\n";
+                // }
+            }
+            return alert(save);
+        }
+        result();
+        // alert(save);
+    </script>
+</body>
+
+</html>

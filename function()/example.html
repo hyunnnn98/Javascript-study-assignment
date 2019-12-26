@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 함수를 생성합니다.
+        // function sumAll() {
+        //     var i;
+        //     var sum = 0;
+        //     for(i = 0; i < arguments.length; i++){
+        //         sum += arguments[i];
+        //     }
+        //     return sum;
+        // }
+
+        // var ret = sumAll(50, 60, 70, 80);
+        // document.write(ret + '<br>');
+
+        // var points = [40, 10, 20, 30];
+
+        // document.write(typeof points + '<br>');
+
+        // function addToN(n) {
+        //     var sum = 0;
+            
+        //     for(var a = 1; a <= n; a++){
+        //         sum += a;
+        //         document.write(sum + '<br>');
+        //     }
+        //     return sum;
+        // }
+        // var count = prompt('n의 숫자를 입력하세요.');
+
+        // document.write("합은?" + addToN(count));
+       function maxVal(arr){
+           var maxValue = arr[0];
+           for(var iCount = 1; iCount < arr.length; iCount++){
+                if(maxValue < arr[iCount]){
+                    maxValue = arr[iCount];
+                }
+            }
+            return maxValue;
+       }
+
+       var num = [12, 34, 76, 65, 47, 91, 88, 39, 81, 79];
+       document.write(maxVal(num));
+    </script>
+</body>
+
+</html>
+

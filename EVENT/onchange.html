@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function myFunction(){
+            var x = document.getElementById("fname");
+            x.value = x.value.toUpperCase();
+            x.style.backgroundColor = "yellow";
+        }
+    </script>
+</head>
+<body>
+    <!-- <buttion onclick = "alert('hello')">button</buttion> -->
+    <!-- name : <input type="text" id = "fname" onchange = "myFunction()"> -->
+    name : <input type="text" id = "fname" onfocus = "myFunction()">
+</body>
+</html>

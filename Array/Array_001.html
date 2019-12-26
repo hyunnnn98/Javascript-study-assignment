@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a = [12, 45, 25, 11, 16, 31, 88, 77, 65, 99];
+        var b = [17, 41, 27, 19, 33, 53, 87, 78, 66, 91];
+        var c = [];
+        for (var i = 0; i < a.length; i++) {
+            c[i] = a[i] + b[i];
+            document.write(c[i] + " ");
+        }
+        document.write("<BR>");
+        for (var i = 0; i < a.length; i++) {
+            if (a[i] > b[i]) {
+                c[i] = a[i];
+            } else
+                c[i] = b[i];
+            document.write(c[i] + " ");
+        }
+
+        // function arraySum(a, b, c) {
+        //     for (var i = 0; i < a.length; i++) {
+        //     c[i] = a[i] + b[i];
+        //     document.write(c[i] + " ");
+        //    }
+        // }
+
+        // arraySum(a, b, c);
+    </script>
+</body>
+
+</html>
